@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 子元素选择器 
+            语法：祖先 后代
+        */
+        div > span{
+            color: orange;
+        }
+        /* 后代选择器 
+            语法：祖先 后代
+        */
+        div span{
+            color: skyblue;
+        }
+        /* 
+            选择下一个紧挨着的兄弟
+            语法：前一个 + 下一个
+         */
+         p+span{
+             color: red;
+         }
+
+        /* 选择下面的所有兄弟元素
+           语法： 兄 ～ 弟 
+        */
+        p~span{
+            color: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!--
+    父元素 
+        -直接包含子元素的元素叫做父元素
+    子元素
+        - 直接被父元素包含的元素是子元素
+    祖先元素
+        - 直接或者简介包含后代元素的元素叫做祖先元素
+        - 一个元素的负元素也是它的祖先元素
+    后代元素
+        - 间接或直接被祖先元素包含的元素叫做后代元素
+    兄弟元素
+        - 拥有相同父元素的元素是兄弟元素
+    -->
+    <div>
+        我是一个div
+        <p>我是div中的p元素
+            <span>我是p元素中的span</span>
+        </p>
+        <span>我是div中的span元素1</span>
+        <span>我是div中的span元素2</span>
+        <span>我是div中的span元素3</span>
+        <span>我是div中的span元素4</span>
+    </div>
+    <span>我不是div中的span元素</span>
+</body>
+</html>
