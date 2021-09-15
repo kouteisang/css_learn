@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            color: orange;
+        }
+        div{
+            color: yellow;
+        }
+        .red{
+            color: red;
+        }
+        /* 
+            样式的冲突
+                -当我们通过不同的选择器，选中相中的元素，
+                并且为我们相同的样式设置不同的值时，此时就发生了样式的冲突。
+            发生样式冲突时，应该用选个样式，应该由选择器的权重（优先级）决定
+
+            选择器的权重：
+                内联样式       1000
+                id选择器       100
+                类和伪类选择器   10
+                元素选择器       1
+                统配选择器       0
+                继承的样式       没有优先级
+
+            比较优先级时，需要将所有选择器的优先级进行相加
+            计算，最后优先级越高，则曰优先显示
+
+            选择器的累加，不会超过其最大的数量级，累选择器再高，
+            也不会超过id选择器
+
+            如果优先级计算后相等，则优先使用靠下的样式
+
+            可以在某一个样式后面添加!important则该样式会获取到最高的优先级
+            甚至超过内联样式
+        */
+    </style>
+</head>
+<body>
+    <div style="color: skyblue;"  id =  "box1" class="red">hhahahahahahahhahahah</div>
+</body>
+</html>
