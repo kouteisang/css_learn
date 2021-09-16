@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            border: 10px red solid;
+            /*
+                外边距（margin）
+                    -外边距不会影响盒子可见宽的大小
+                    -但是外边距会影响盒子的位置
+                    -一共有四个方向的外边距
+                        - margin-top;
+                        - margin-right
+                        - margin-bottom
+                        - margin-left
+                - 元素在页面中是自左向右顺序排列的
+                    所以默认情况下如果我们设置左和上外边距则会移动元素自身
+                    而设置下和右外边距则会移动其他元素
+                    margin也可以设置负值，如果设置负值，则往相反方向移动
+                    默认情况下设置margin-right没有任何效果
+                -margin的简写属性就是margin，用法和padding一样
+            */
+            margin-top: 100px;
+            margin-left: 100px;
+            margin-bottom: 100px;
+
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
