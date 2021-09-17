@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .s1{
+            /*
+                行内元素不支持设置宽度和高度
+                    - 其大小由内容撑开
+                    - 行内元素可以设置padding，但是垂直方向的padding不会影响页面的布局
+                    - 行内元素可以设置border，垂直方向的border不会影响页面的布局
+                    - 行内元素可以设置margin，垂直方向的布局不会影响布局
+            */
+            background-color: yellow;
+            padding-left: 100px;
+            /*
+                实验证明，设置padding-top没用，不生效
+            */
+            padding-top:100px
+        }
+        .s2{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+        a{
+            /*
+                display: 用来设置元素显示的类型
+                    可选值：
+                        inline:将元素设置为行内元素
+                        block:将元素设置为块元素
+                        inline-block: 将元素设置为行内元素
+                                （既可以设置宽度和高度又不会独占一行）
+                                （兼具了两种元素的优缺点）
+                                （能不用就不用）
+                        table: 将元素设置成表格
+                        none：元素不在页面中显示
+            */
+
+            /*
+                visibility: 用来设置元素的显示状态
+                    visible：默认值，元素在页面中正常显示
+                    hidden：元素在页面中隐藏，不显示，但是所占据的位置依然在
+            */
+            display: block;
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <span class="s1">我是span</span>
+    <div class="s2">我是div</div>
+    <a href="javascript:;">超链接</a>
+</body>
+</html>
