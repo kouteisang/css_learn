@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            /*
+                浮动元素不会盖住文字，文字会自动环绕在浮动元素的周围，
+                所以我们可以利用浮动来设置文字环绕图片的效果
+            */
+            float: left;
+        }
+        .box2{
+            background-color: yellowgreen;
+            float: left;
+
+            /*
+                元素设置浮动以后，将会从文档流中脱离，从文档流中脱离后，元素会发生一些变化
+                脱离文档流的特点：
+                    块元素：
+                        1、块元素不再独占页面中的一行
+                        2、脱离文档流后，块元素的宽度和高度默认都被内容撑开
+                    行内元素：
+                        行内元素脱离文档流以后会变成块元素，特点和块元素一样
+
+                    脱离文档流后，不需要再区分块和行内元素流
+
+                    **这是元素脱离文档流后的特点，不是浮动的特点。
+            */
+        }
+        .box3{
+             background-color: orange;
+             float: left;
+             width: 200px;
+        }
+        .s1{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box1"></div>
+    <p>
+        他说他比较欣赏鲁迅先生的作品，突然间在我的脑海里突然浮现了《秋夜》文章开头的这句“在我的后园，可以看见墙外有两株树，一株是枣树，另一株也是枣树。”，也许大家也会记忆犹新的，正是因为能把两颗同样的枣树分开写，才会对这《秋夜》篇文章难以忘怀。
+
+        对这句“在我的后园，可以看见墙外有两株树，一株是枣树，另一株也是枣树。”有很多人都有不同对理解，如果换着你我一般人的思想境界也许就会写成“我家后园，可以看见两株枣树。”，可圣人就是圣人，出笔不凡和与众不同，留给我们只是无尽的揣测先生当时的意境，为什么会这样写？
+        
+        现在很多人都在猜测，鲁迅先生说的这句话的时候，表达的心情，我也大致归纳下。
+        
+        “这就是一种孤寂的感觉。”
+    </p> -->
+
+    <div class="box2">hello</div>
+    <div class="box3">hello1</div>
+    <span class="s1">我是一个span1</span>
+</body>
+</html>
