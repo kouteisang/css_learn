@@ -7,6 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/reset.css">
     <style>
+
+        body{
+            height: 3000px;
+        }
         /*
             设置nav的大小 
          */
@@ -15,6 +19,12 @@
              height: 48px;
              background-color: #E8E7E3;
              margin: 100px auto;
+             /* 
+                粘滞定位, 当元素的position设置为sticky时则开启了元素的粘滞定位，点知定位和相对定位的特点基本一致
+                不同的是粘滞定位可以在元素搭配大某个位置时，将其固定
+              */
+             position: sticky;
+             top: 10px;
          }
          .nav li{
              float: left;
