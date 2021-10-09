@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东顶部导航条</title>
+    <!-- 引入重置样式表 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 引入图标字体 -->
+    <link rel="stylesheet" href="./fa/css/all.css">
+    <style>
+        /* 解决高度塌陷 */
+        .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+        body{
+            /* 设置字体 */
+            font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;;  
+        }
+
+
+        /* 设置外部容器的样式 */
+        .top-bar-wrapper{
+            /* 设置宽度 */
+            width: 100%;
+            /* 设置背景颜色 */
+            background-color: #E3E4E5;
+            /* 设置行高，没有设置高度，使文字垂直居中 */
+            height: 30px;
+            line-height: 30px;
+            /* 设置下边框 */
+            border-bottom: 1px #DDDDDD solid;
+        }
+        /* 设置内部容器的样式 */
+        .top-bar{
+            /* 固定宽度 */
+            width: 1190px;
+            /* 设置水平居中 */
+            margin: 0 auto;
+            position: relative;
+        }
+        .top-bar a:hover,
+        .top-bar a.highlight{
+            color: #f10215;
+        }
+        /* 设置location向左浮动 */
+        .location{
+            float: left;
+        }
+        /* 当鼠标  */
+        .location:hover .city-list{
+            display: block;
+        }
+        /* 设置shortcut向右浮动 */
+        .shortcut{
+            float: right;
+        }
+        /* 设置location下的小图标 */
+        .location .fas{
+            color: #f10215;
+        }
+        .location .city-list{
+            display: none;
+            width: 320px;
+            height: 436px;
+            background-color: white;
+            border: 1px solid rgb(204, 204, 204);
+            /* 设置绝对定位 使其不占据页面的位置,也就是让其脱离文档流 */
+            position: absolute;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+            top: 31px;
+        }
+        /* 设置current-city的移入效果 */
+        .location:hover .current-city{
+            border: 1px solid rgb(204, 204, 204);
+            border-bottom: none;
+            padding-bottom: 2px;
+            background-color: white;
+        }
+        .current-city{
+            padding: 0 10px;
+            border: 1px solid transparent;
+            border-bottom: none;
+            position: relative;
+            z-index: 1;
+        }
+        .shortcut li{
+            float: left ;
+        }
+        .shortcut .line{
+            width: 1px;
+            height: 10px;
+            background-color: #999;
+            margin: 10px 12px;
+        }
+        /* 设置字体样式 */
+        .top-bar a,
+        .top-bar span,
+        .top-bar i{
+            color: #999;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建外围容器 -->
+    <div class="top-bar-wrapper clearfix highlight">
+        <!-- 创建内部容器 -->
+        <div class="top-bar">
+             <!-- 左侧的菜单 -->
+            <div class="location">
+                <div class="current-city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="javascript:;">北京</a>
+                </div>
+                <!-- 放置城市列表div -->
+                <div class="city-list">
+
+                </div>
+            </div>
+            <!-- 右侧菜单 -->
+            <ul class="shortcut clearfix">
+                <li>
+                    <a href="javascript:;">你好，请登录</a>
+                    <a class="highlight" href="javascript:;">免费登陆</a>
+                </li>
+                <!-- 分割线 -->
+                <li class="line"></li>
+                <li>
+                    <a href="javascript:;">我的订单</a>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <a href="javascript:;">我的京东</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <a href="javascript:;">京东会员</a>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <a class="highlight" href="javascript:;">企业采购</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <span>客户服务</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <span>网站导航</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <span>手机京东</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
