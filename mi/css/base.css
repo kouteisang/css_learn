@@ -6,7 +6,21 @@
     clear: both;
 }
 
+a{
+    text-decoration: none;
+    color: #333;
+}
+
 body{
     font: 14px/1.5 Helvetica Neue;
     color: #333;
+    /* 不让body变得过小导致容器溢出 */
+    min-width: 1226px;
+}
+
+.w{
+    /* 固定容器的宽度 */
+    width: 1226px;
+    /* 设置容器居中 */
+    margin: 0 auto;
 }
