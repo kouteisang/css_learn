@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            height: 500px;
+            border-bottom: 10px black solid;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        .outer div{
+            float: left;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #bfa;
+            animation: ball 0.5s forwards ease-in infinite alternate;
+        }
+
+        .outer .box1{
+            background-color: red;
+            animation-delay: 0.1s;
+        }
+        .outer .box2{
+            background-color: orange;
+            animation-delay: 0.2s;
+        }
+        .outer .box3{
+            background-color: yellow;
+            animation-delay: 0.3s;
+        }
+        .outer .box4{
+            background-color: green;
+            animation-delay: 0.4s;
+        }
+        .outer .box5{
+            background-color: aqua;
+            animation-delay: 0.5s;
+        }
+        .outer .box6{
+            background-color: blue;
+            animation-delay: 0.6s;
+        }
+        .outer .box7{
+            background-color: purple;
+            animation-delay: 0.7s;
+        }
+
+        /* 创建小球的下落动画 */
+        @keyframes ball{
+            from{
+                margin-top: 0px;
+            }
+            to{
+                margin-top: 400px;
+                animation-timing-function: ease-out;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* 设置表的样式 */
+        .clock{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 100px;
+            border-radius: 50%;
+            border: 10px solid black;
+        }
+
+        .clock > div{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        /* 设置时针 */
+        .hour-wrapper{
+            margin: auto;
+            height: 60%;
+            width: 60%;
+            /* 
+                linear 匀速运动
+             */
+            animation: run 60*60*12s linear infinite;
+        }
+        
+        .hour{
+            height: 50%;
+            width: 6px;
+            background-color: #000;
+            margin: 0 auto;
+        }
+
+        .min-wrapper{
+            margin: auto;
+            height: 80%;
+            width: 80%;
+            animation: run 3600s steps(60) infinite;
+        }
+        
+        .min{
+            height: 50%;
+            width: 4px;
+            background-color: #000;
+            margin: 0 auto;
+        }
+
+        .sec-wrapper{
+            margin: auto;
+            height: 95%;
+            width: 95%;
+            animation: run 60s steps(60) infinite;
+        }
+        
+        .sec{
+            height: 50%;
+            width: 2px;
+            background-color: #000;
+            margin: 0 auto;
+        }
+
+
+        /*  
+            旋转的关键帧
+        */
+        @keyframes run {
+            from{
+                transform: rotateZ(0);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="clock">
+        <!-- 创建时针 -->
+        <div class="hour-wrapper">
+            <div class="hour">
+            </div>
+        </div>
+        <!-- 创建分针 -->
+        <div class="min-wrapper">
+            <div class="min">
+            </div>
+        </div>
+        <!-- 创建秒针 -->
+        <div class="sec-wrapper">
+            <div class="sec">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

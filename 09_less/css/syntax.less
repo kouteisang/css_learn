@@ -1,0 +1,56 @@
+body{
+    background-color: #bfa;
+
+}
+//less中的注释，注释中的内容不会被解析到css中
+/*
+    css中的注释，它的内容会被解析到css文件中
+*/
+.box1{
+    background-color: red;
+    .box2{
+        background-color: orange;
+        .box3{
+            background-color: yellow;
+        }
+    }
+}
+
+//变量，在变量中可以存储任意一个值
+//并且我们可以在需要时，任意修改变量中的值
+//变量的语法： @变量名
+@a:100px;
+@b:#bfa;
+@c:box6;
+
+.box5{
+    // 使用变量时，如果是直接使用则以 @变量名 的形式使用即可
+    width: @a;
+    color: @b;
+}
+
+//作为类名，或者一部分值使用时，必须以@{变量名}的形式使用
+@path:"../../08_animation/1.png";
+.@{c}{
+    width: @a;
+    background-image: url("@{path}");
+}
+
+@d:200px;
+@d:300px;
+
+div{
+    // 变量发生重名时，会优先使用比较近的变量
+    width: @d;
+    height: @e;
+}
+
+@e:335px;
+
+div{
+    width: 300px;
+    height: $width;
+}
+
+
+

@@ -1,0 +1,122 @@
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.top-bar-wrapper {
+  width: 100%;
+  background-color: black;
+}
+.top-bar {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 14px;
+  height: 48px;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .left-menu:hover .nav {
+    display: block;
+  }
+}
+.left-menu .nav {
+  display: none;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+}
+.left-menu .nav li {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid #fff;
+}
+.left-menu .nav li a {
+  display: block;
+  line-height: 44px;
+  font-size: 14px;
+}
+.left-menu .nav li:last-child a {
+  display: inline-block;
+  margin-right: 6px;
+}
+.left-menu .nav li span {
+  color: white;
+  font-size: 14px;
+}
+.left-menu .menu-icon {
+  width: 18px;
+  height: 48px;
+  position: relative;
+}
+.left-menu .menu-icon li {
+  position: absolute;
+  width: 18px;
+  height: 1px;
+  background-color: #fff;
+  transform-origin: left;
+  transition: 0.5s;
+}
+.left-menu .menu-icon li:nth-child(1) {
+  top: 18px;
+}
+.left-menu .menu-icon li:nth-child(2) {
+  top: 24px;
+}
+.left-menu .menu-icon li:nth-child(3) {
+  top: 30px;
+}
+.left-menu .menu-icon:hover li:nth-child(1) {
+  top: 18px;
+  transform: rotateZ(40deg);
+}
+.left-menu .menu-icon:hover li:nth-child(2) {
+  top: 24px;
+  opacity: 0;
+}
+.left-menu .menu-icon:hover li:nth-child(3) {
+  top: 30px;
+  transform: rotateZ(-40deg);
+}
+.logo a {
+  text-indent: -99999px;
+  display: block;
+  width: 122px;
+  height: 32px;
+  background-image: url('../img/logo-white.@f94af395.png');
+  background-size: 122px 32px;
+}
+@media only screen and (min-width: 768px) {
+  body .left-menu {
+    order: 2;
+    flex: auto;
+  }
+  body .left-menu .nav {
+    position: static;
+    display: flex;
+  }
+  body .left-menu .nav li {
+    width: auto;
+    border-bottom: none;
+  }
+  body .left-menu .nav li a {
+    line-height: 48px;
+  }
+  body .left-menu .nav li span {
+    display: none;
+  }
+  body .left-menu .menu-icon {
+    display: none;
+  }
+  body .logo {
+    order: 1;
+  }
+  body .user-info {
+    order: 3;
+  }
+}
+/*# sourceMappingURL=./style.css.map */

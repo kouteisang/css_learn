@@ -1,0 +1,154 @@
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.top-bar-wrapper{
+    width: 100%;
+    background-color: black;
+}
+
+// 导航条的外部容器
+// 全屏幕宽的 所以宽度就不给了
+.top-bar{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 14px;
+    height: 48px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+//设置左侧导航的图标
+.left-menu{
+    @media screen {
+        @media (max-width: 768px) {
+            &:hover{
+                .nav{
+                    display: block;
+                }
+            }
+        }
+    }
+    .nav{
+        display: none;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black; 
+        // 设置背景颜色
+        li{
+            width: 80%;
+            margin: 0 auto;
+            border-bottom: 1px solid #fff;
+            a{
+                display: block;
+                line-height: 44px;
+                font-size: 14px;
+            }
+            &:last-child{
+                a{
+                    display: inline-block;
+                    margin-right: 6px;
+                }
+            }
+            span{
+                color: white;
+                font-size: 14px;
+            }
+            
+        }
+    }
+    // 图标
+    .menu-icon{
+        width: 18px;
+        height: 48px;
+        position: relative;
+        // 导航的线
+        li{
+            position: absolute;
+            width: 18px;
+            height: 1px;
+            background-color: #fff; 
+            // 修改变形的原点
+            transform-origin: left;
+            transition: .5s;
+        }
+        li:nth-child(1){
+            top: 18px;
+        }
+        li:nth-child(2){
+            top: 24px;
+        }
+        li:nth-child(3){
+            top: 30px;
+        }
+        // 鼠标移入以后的效果，正常项目时，效果需要通过js来实现
+        &:hover{
+            li:nth-child(1){
+                top: 18px;
+                transform: rotateZ(40deg);
+            }
+            li:nth-child(2){
+                top: 24px;
+                opacity: 0;
+            }
+            li:nth-child(3){
+                top: 30px;
+                transform: rotateZ(-40deg);
+            }
+        }
+    }
+} 
+
+.logo{
+    a{
+        text-indent: -99999px;
+        display: block;
+        width: 122px;
+        height: 32px;
+        background-image: url('../img/logo-white.@f94af395.png');
+        background-size: 122px 32px;
+    }
+}
+
+
+@media only screen{
+    @media (min-width: 768px) {
+        body{
+            .left-menu{
+                order: 2;
+                flex:auto;
+                //显示菜单
+                .nav{
+                    position: static;
+                    display: flex;
+                    li{
+                        width: auto;
+                        border-bottom: none;
+                        a{
+                            line-height: 48px;
+                        }
+                        span{
+                            display: none;
+                        }
+                    }
+                }
+                //隐藏菜单图标
+                .menu-icon{
+                    display: none;
+                }
+            }
+            .logo{
+                order: 1;
+            }
+            .user-info{
+                order: 3;
+            }
+        }
+    }
+}

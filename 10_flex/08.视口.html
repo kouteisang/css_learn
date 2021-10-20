@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box1{
+            width: 375px;
+            height: 100px;
+            background-color: #bfa;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        不同的设备完美视口的大小是不一样的
+        由于不同设备的视口和像素比不同，所以同样的375px在不同的设备下意义是不一样的
+
+        所以在移动端开发时，对网页就不能再使用像素进行布局了
+
+        vw 表示的是视口的宽度（viewport width）
+            - 100vw = 1个视口的宽度
+            - 1vw = 1%视口的宽度
+
+            vw这个单位永远相当于视口的宽度计算
+     -->
+     <div class="box1"></div>
+</body>
+</html>

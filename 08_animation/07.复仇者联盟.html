@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html{
+            perspective: 800px;
+        }
+
+        .cube{
+            width: 218px;
+            height: 218px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            transform: rotateX(45deg) rotateZ(45deg);
+            animation: run 20s infinite;
+        }
+
+        .cube > div{
+            width: 218px;
+            height: 218px;
+            /* 为元素设置透明效果 */
+            opacity: 0.7;
+            position: absolute;
+        }
+        img{
+            vertical-align: top;
+        }
+        .box1{
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .box2{
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .box3{
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .box4{
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .box5{
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        .box6{
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        @keyframes run {
+            from{
+                transform: rotateX(0deg) rotateZ(0deg);
+            }
+            to{
+                transform: rotateX(1turn) rotateZ(1turn);
+            }
+        }
+        .cube:hover{
+            animation-play-state: paused;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 创建一个外部容器 -->
+    <div class="cube">
+        <div class="box1">
+            <img src="./1.png" alt="">
+        </div>
+        <div class="box2">
+            <img src="./1.png" alt="">
+        </div>
+        <div class="box3">
+            <img src="./1.png" alt="">
+        </div>
+        <div class="box4">
+            <img src="./1.png" alt="">
+        </div>
+        <div class="box5">
+            <img src="./1.png" alt="">
+        </div>
+        <div class="box6">
+            <img src="./1.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

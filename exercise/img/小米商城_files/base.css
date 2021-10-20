@@ -1,0 +1,17 @@
+/* 放置公共样式 */
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+.w{
+    margin: 0 auto;
+    width: 1226px;
+}
+
+a{
+    text-decoration: none;
+}
